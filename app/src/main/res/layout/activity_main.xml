@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="355dp"
+    android:layout_gravity="center"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+
+<LinearLayout
+    android:id="@+id/home_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/carrot"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:text="DEMO"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_gravity="center"/>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_slider_mainActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp">
+
+        <com.smarteist.autoimageslider.SliderView
+            android:id="@+id/imageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:sliderAnimationDuration="600"
+            app:sliderAutoCycleDirection="back_and_forth"
+            app:sliderIndicatorAnimationDuration="600"
+            app:sliderIndicatorEnabled="true"
+            app:sliderIndicatorGravity="center_horizontal|bottom"
+            app:sliderIndicatorMargin="15dp"
+            app:sliderIndicatorOrientation="horizontal"
+            app:sliderIndicatorPadding="3dp"
+            app:sliderIndicatorRadius="2dp"
+            app:sliderIndicatorSelectedColor="#5A5A5A"
+            app:sliderIndicatorUnselectedColor="#FFF"
+            app:sliderScrollTimeInSec="1" />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Exclusive Offer"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/category_see_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:text="See all"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rec_exclusive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="10dp"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/new_product_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:text="Groceries"
+                    android:textSize="21sp"
+                    android:textStyle="bold"/>
+
+
+
+                <TextView
+                    android:id="@+id/NewProduct_see_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="8dp"
+                    android:text="See all"
+                    android:textColor="@color/green"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/grocery_rec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="7dp"
+                android:layout_marginTop="6dp"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/popular_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="9dp"
+                android:text="Best Selling"
+                android:textSize="21sp"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/popular_see_all"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="8dp"
+                android:text="See all"
+                android:textColor="@color/green"
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+        </RelativeLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/best_selling_rec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="7dp"
+            android:layout_marginTop="6dp"
+            android:padding="5dp"/>
+
+
+    </LinearLayout>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>
